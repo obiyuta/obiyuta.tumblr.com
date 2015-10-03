@@ -313,7 +313,7 @@ $(window).bind('load', function() {
             <div>
                 <h1><a href="/">Obi Yuta : Tokyo Japan</a></h1>
                 <div id="siteDescription">
-                    <h2>All photographs are taken with my instax.</h2>
+                    <h2>All photographs are from my instax.</h2>
                     {block:Description} <span>{Description}</span> {block:Description}
                 </div>
                 <nav id="mainNav">
@@ -433,20 +433,6 @@ $(window).bind('load', function() {
                           {/block:Lines}
                         </ul>
                       {/block:Chat}
-                      {block:Audio}
-                        <div class="audioleft">
-                            <div class="audioc">
-                                <div class="audio">{AudioPlayerBlack}</div>
-                            </div>
-                        </div>
-                        <div class="audioright">
-                            <div class="audioCaption">{block:Artist}<b>{Artist}</b>{/block:Artist}
-                                <p>&mdash;{block:TrackName}{TrackName}{/block:TrackName}</p>
-                            </div>
-                        </div>
-                        <div class="audioClear"></div>
-                        <div class="audioContainer"> {block:Caption}{Caption}{/block:Caption} </div>
-                      {/block:Audio}
                       {block:Answer}
                         <h3>{Asker} asked: {Question}</h3>
                         {Answer}
@@ -506,10 +492,11 @@ $(window).bind('load', function() {
         <section id="aboutContainer" style="display:none;">
             <div class="close"></div>
             <h3>Obi Yuta</h3>
-            <p class="textCufon">1988 -</p>
-            <p class="textCufon">A hobbyist photographer based in Tokyo, Japan.<p>
-            <p class="textCufon">This is my little photo blog.</p>
-            <p class="textCufon">All photographs are taken with my instax.</p>
+            <p class="textCufon">
+            1988 -<br>
+            A hobbyist photographer based in Tokyo, Japan.<br>
+            This is my little photo blog.<br>
+            All photographs are from my instax.</p>
         </section>
         <section id="tagContainer" style="display:none;">
             <div class="close"></div>
