@@ -571,6 +571,10 @@ $(window).bind('load', function() {
                 $(this).removeClass('an270').addClass('an0');
             }
         });
+        // リンクキャンセル
+        $('.styled > a').click(function(){
+            return false;
+        });
     }
 
     //browsercheck
