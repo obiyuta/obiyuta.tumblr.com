@@ -365,7 +365,7 @@ $(window).bind('load', function() {
         <section id="main" class="clearfix">
             <div class="layout">
               {block:Posts}
-                <article class="content">
+                <article class="content" id="{PostID}">
                     <div class="styled">
                       {block:Text}
                         {Body}
@@ -628,9 +628,10 @@ $(window).bind('load', function() {
             start: function() {
                 $('.loading').removeClass('hide');
             },
-            load: function(){
+            load: function(c){
                 $('.loading').addClass('hide');
                 $('.photoWrapper').unbind();
+                Tumblr.LikeButton.get_status_by_page(c.page);
                 styling();
                 photoRotate();
                 Cufon.replace('h1,h2,h3,p,#mainNav,#pageNav a,#siteDescription,.textCufon',{fontFamily:"Cufon"});
