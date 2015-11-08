@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>{block:PostSummary}{PostSummary} | {/block:PostSummary}{block:SearchPage}{lang:Search results for SearchQuery} | {/block:SearchPage}{block:TagPage}Tag of #{Tag} | {/block:TagPage}{Title}</title>
 <meta name="description" content="{block:IndexPage}{MetaDescription}{/block:IndexPage}{block:PermalinkPage}This photograph '{MetaDescription}' is made with my instant cam, posted on {block:Posts}{block:Date}{ShortMonth} {DayOfMonthWithZero}, {Year}{/block:Date}{/block:Posts}.{/block:PermalinkPage}" />
-<meta name="google-site-verification" content="xcSE7wAsBqubfIDpSsrk-bagAJzVOU3OO2welEAQ5To" />
 <meta name="viewport" content="width=device-width">
 <meta name="if:Show description" content="1" />
 <meta name="if:Show search" content="1" />
@@ -20,6 +19,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,pre,a,abbr,acronym,a
 header,footer,section,article,nav,aside{display:block;}
 html,body{width:640px;background:#ffffff;color:#8F8F8F;font-size:12px;line-height:20px;font-family:Garamond,times,serif;padding-top:45px;padding-bottom:90px;margin:0 auto;position:relative;overflow-x:hidden;}
   body.mobile{font-size:16px;line-height:27px;}
+@media screen and (min-width: 760px) {
+  html,body{width:1024px;}
+}
 #container{display:none;width:500px;margin:0 auto;}
 #main{width:320px;padding:0px;margin:auto;}
 h1,h2,h3{font-family:Cufon;}
@@ -205,7 +207,7 @@ article .meta a:hover,article .meta a:active{text-decoration: underline;}
 article h2{color:#8F8F8F;margin-bottom:0;}
 article h2 a:link,article h2 a:visited{color:#8F8F8F;text-decoration:none;}
 article h2 a:hover,article h2 a:active{text-decoration:none;}
-blockquote{border-left:2px solid #b9b9b9;margin-left:0;padding-left:1em;}
+blockquote{margin-left:0;}
 #quoteSource{margin:0 auto;text-align:left;}
 #quoteText h2{text-align:left;color:#8F8F8F;}
 article .chat{list-style:none;padding:0;margin:0;}
@@ -372,7 +374,7 @@ $(window).bind('load', function() {
                       {/block:Text}
                       {block:Photo}
                         {LinkOpenTag}
-                        <div class="photoContainer {block:HasTags}{block:Tags}{tag} {/block:Tags}{/block:HasTags}"> <img src="{PhotoURL-400}" alt="{PhotoAlt}" /></div>
+                        <div class="photoContainer {block:HasTags}{block:Tags}{tag} {/block:Tags}{/block:HasTags}"> <img src="{PhotoURL-500}" alt="{PhotoAlt}" /></div>
                         {LinkCloseTag}
                         {block:Caption}
                         <div class="photoCaption textCufon"><a href="{Permalink}">{Caption}</a></div>
@@ -416,7 +418,7 @@ $(window).bind('load', function() {
                         <aside>
                             <ul class="like_and_reblog_buttons">
                                 <li>{LikeButton size="20"}</li>
-                                <li>{ReblogButton}</li>
+                                <li>{ReblogButton size="20"}</li>
                               {block:PermalinkPage}
                                 <li class="share twBtn" ><a class="twLink" href="http://twitter.com/share?url={Permalink}&text=Photo%20posted%20on%20{block:Date}{Year}%2e{MonthNumberWithZero}%2e{DayOfMonthWithZero}{/block:Date}%20%7C%20{Title}" target="_blank"></a></li>
                                 <li class="share fbBtn"><a class="fbLink" href="http://www.facebook.com/sharer.php?u={Permalink}" target="_blank"></a></li>
@@ -494,6 +496,7 @@ $(window).bind('load', function() {
             <h3>Obi Yuta</h3>
             <p class="textCufon">
             1988 -<br>
+            <br>
             A hobbyist photographer based in Tokyo, Japan.<br>
             This is my little photo blog.<br>
             All photographs are from my instax.</p>
@@ -502,14 +505,15 @@ $(window).bind('load', function() {
             <div class="close"></div>
             <h3> Tags</h3>
             <ul>
-                <li><a href="/tagged/kouzushima"><span class="textCufon">Kouzushima-island</span></a></li>
-                <li><a href="/tagged/flower"><span class="textCufon">Flower</span></a></li>
-                <li><a href="/tagged/Kamakura"><span class="textCufon">Kamakura</span></a></li>
-                <li><a href="/tagged/NAC"><span class="textCufon">NAC Fes.</span></a></li>
-                <li><a href="/tagged/Osaka"><span class="textCufon">Osaka</span></a></li>
-                <li><a href="/tagged/Hiroshima"><span class="textCufon">Hiroshima</span></a></li>
-                <li><a href="/tagged/Nagatoro"><span class="textCufon">Nagatoro</span></a></li>
-                <li><a href="/tagged/Kyusyu"><span class="textCufon">Kyusyu</span></a></li>
+                <li><a href="/tagged/hida-takayama"><span class="textCufon">#Hida-takayama</span></a></li>
+                <li><a href="/tagged/kouzushima"><span class="textCufon">#Kouzushima-island</span></a></li>
+                <li><a href="/tagged/flower"><span class="textCufon">#Flower</span></a></li>
+                <li><a href="/tagged/kamakura"><span class="textCufon">#Kamakura</span></a></li>
+                <li><a href="/tagged/nac"><span class="textCufon">#NAC Fes.</span></a></li>
+                <li><a href="/tagged/osaka"><span class="textCufon">#Osaka</span></a></li>
+                <li><a href="/tagged/hiroshima"><span class="textCufon">#Hiroshima</span></a></li>
+                <li><a href="/tagged/nagatoro"><span class="textCufon">#Nagatoro</span></a></li>
+                <li><a href="/tagged/kyusyu"><span class="textCufon">#Kyusyu</span></a></li>
             </ul>
         </section>
     </div>
