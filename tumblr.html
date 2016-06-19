@@ -261,10 +261,11 @@ article .chat li { margin: 0 0 2px; padding: 2px 0 2px 0;}
 .loading { width: 48px; height: 48px; position: absolute; bottom: 50px; left: 50%; margin-left: -24px; background: url('//static.tumblr.com/5gdodwo/TySmupmdx/loading.gif') center no-repeat; z-index: 100;}
 #windowloading { position: fixed; bottom: 50%; left: 50%; margin-left: -24px; margin-bottom:-24px;}
 .hide { display: none;}
-#returnToTop,#facebookLikeBtn {opacity: 0; -ms-filter:'alpha(opacity=0)'; visibility: hidden;-webkit-transition-property: opacity,visibility;-moz-transition-property: opacity,visibility;-ms-transition-property: opacity,visibility;transition-property: opacity,visibility;-webkit-transition-duration: .3s,0s;-moz-transition-duration: .3s,0s;-ms-transition-duration: .3s,0s;transition-duration: .3s,0s;-webkit-transition-timing-function: linear;-moz-transition-timing-function: linear;-ms-transition-timing-function: linear;transition-timing-function: linear;-webkit-transition-delay: 0s,0.3s;-moz-transition-delay: 0s,0.3s;-ms-transition-delay: 0s,0.3s;transition-delay: 0s,0.3s;z-index:100; cursor:pointer;}
+#returnToTop,#facebookLikeBtn,#twitterShareBtn {opacity: 0; -ms-filter:'alpha(opacity=0)'; visibility: hidden;-webkit-transition-property: opacity,visibility;-moz-transition-property: opacity,visibility;-ms-transition-property: opacity,visibility;transition-property: opacity,visibility;-webkit-transition-duration: .3s,0s;-moz-transition-duration: .3s,0s;-ms-transition-duration: .3s,0s;transition-duration: .3s,0s;-webkit-transition-timing-function: linear;-moz-transition-timing-function: linear;-ms-transition-timing-function: linear;transition-timing-function: linear;-webkit-transition-delay: 0s,0.3s;-moz-transition-delay: 0s,0.3s;-ms-transition-delay: 0s,0.3s;transition-delay: 0s,0.3s;z-index:100; cursor:pointer;}
 #returnToTop {background:url('//static.tumblr.com/5gdodwo/qxpmv29vt/totop.gif');width:50px; height:50px; position:fixed; bottom:10px; right:20px;display: block;}
 #facebookLikeBtn {position:fixed;top:10px;left:10px;}
-#returnToTop.show, #facebookLikeBtn.show {opacity: 1.0; -ms-filter: 'alpha(opacity=100)'; visibility: visible;-webkit-transition-delay: 0s;-moz-transition-delay: 0s;-ms-transition-delay: 0s;transition-delay: 0s;}
+#twitterShareBtn {position:fixed;top:10px;left:100px;}
+#returnToTop.show, #facebookLikeBtn.show, #twitterShareBtn.show {opacity: 1.0; -ms-filter: 'alpha(opacity=100)'; visibility: visible;-webkit-transition-delay: 0s;-moz-transition-delay: 0s;-ms-transition-delay: 0s;transition-delay: 0s;}
 #returnToTop.show:hover {opacity: 0.7; -ms-filter: 'alpha(opacity=70)'}
 #tumblr_controls {opacity:0.5!important;-webkit-transition-property: opacity,visibility;-moz-transition-property: opacity,visibility;-ms-transition-property: opacity,visibility;transition-property: opacity,visibility;-webkit-transition-duration: .3s,0s;-moz-transition-duration: .3s,0s;-ms-transition-duration: .3s,0s;transition-duration: .3s,0s;-webkit-transition-timing-function: linear;-moz-transition-timing-function: linear;-ms-transition-timing-function: linear;transition-timing-function: linear;-webkit-transition-delay: 0s,0.3s;-moz-transition-delay: 0s,0.3s;-ms-transition-delay: 0s,0.3s;transition-delay: 0s,0.3s;}
 #tumblr_controls:hover {opacity:1.0!important;}
@@ -501,10 +502,12 @@ $(window).bind('load', function() {
   <aside>
     <div class="loading hide"></div>
     <div id="returnToTop"></div>
-  <div id="facebookLikeBtn">
-    <fb:like width="50" height="The pixel height of the plugin" colorscheme="light" layout="button_count" action="like" show_faces="false" send="false"></fb:like>
-    <!--<div class="g-plusone" data-size="medium"></div>-->
-  </div>
+    <div id="facebookLikeBtn">
+      <fb:like width="50" height="The pixel height of the plugin" colorscheme="light" layout="button_count" action="like" show_faces="false" send="false" data-href="http://obiyuta.com"></fb:like>
+    </div>
+    <div id="twitterShareBtn">
+      <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
   </aside>
 </div>
 <!-- END container -->
@@ -658,11 +661,13 @@ $(window).bind('load', function() {
       });
 
     var fbBtn = $('#facebookLikeBtn');
+    var twBtn = $('#twitterShareBtn');
     var topBtn = $('#returnToTop');
     $(window).scroll(function () {
       if ($(this).scrollTop() > 300) {
         topBtn.addClass('show');
         fbBtn.addClass('show');
+        twBtn.addClass('show');
       } else {
         topBtn.removeClass('show')
       }
