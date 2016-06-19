@@ -11,13 +11,15 @@ if(navigator.userAgent.indexOf('iPhone') > -1) d.write('<meta name="viewport" co
 else if(navigator.userAgent.indexOf('iPad') > -1) d.write('<meta name="viewport" content="width=640, minimum-scale=0, maximum-scale=1, user-scalable=yes">');
 else if(navigator.userAgent.indexOf('Android') > -1) d.write('<meta name="viewport" content="width=320, minimum-scale=0, maximum-scale=1, user-scalable=yes">');
 </script>
-<meta name="if:Show description" content="1" />
-<meta name="if:Show search" content="1" />
-<meta name="text:Twitter name" content="" />
-<meta name="text:Disqus Shortname" content="" />
+<meta property="og:title" content="{block:PostSummary}{PostSummary} | {/block:PostSummary}{block:SearchPage}{lang:Search results for SearchQuery} | {/block:SearchPage}{block:TagPage}Tag of #{Tag} | {/block:TagPage}{Title}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="http://65.media.tumblr.com/d830b83d895731822eb7232a0662edab/tumblr_o8ylgkcPsE1r7b95go1_1280.png"/>
+<meta name="if:Show description" content="1"/>
+<meta name="if:Show search" content="1"/>
+<meta name="text:Disqus Shortname" content=""/>
 <meta name="keywords" content="instax,instant film,instax mini 90,blog,gallery,{block:Permalink}{block:Posts}{block:Tags}{Tag}, {/block:Tags}{/block:Posts}{/block:Permalink}チェキ,ポラロイド,風景,写真,ブログ,ギャラリー,cheki">
-<link rel="shortcut icon" href="{Favicon}" />
-<link rel="alternate" type="application/rss+xml" title="{Title}" href="{RSS}" />
+<link rel="shortcut icon" href="{Favicon}"/>
+<link rel="alternate" type="application/rss+xml" title="{Title}" href="{RSS}"/>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 <!-- Styles -->
