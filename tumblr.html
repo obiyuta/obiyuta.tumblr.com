@@ -58,7 +58,7 @@ p { margin-bottom: 0px;}
 #mainNav a:hover, #mainNav a:active { outline: none; text-decoration: none;}
 #mainNav a.active { text-decoration: none;}
 #mainNav .twitter, #mainNav .facebook, #mainNav .instagram { float:right; position:relative; top:3px; }
-#mainNav .twitter a, #mainNav .facebook a, #mainNav .instagram a { color:#cfcfcf; }
+#mainNav .twitter a, #mainNav .facebook a, #mainNav .instagram a { color:#cfcfcf; font-size: 18px; }
 #designline { margin-top: 50px;}
 h5 { position: relative; top: -35px; margin-bottom: 0px; font-size: 10px; color: #8F8F8F; text-decoration: none; text-transform: Uppercase; font-weight: normal; background: #fff;}
 h5 a:link, .line a:visited { font-size: 10px; color: #8F8F8F; text-decoration: none; text-transform: Uppercase; font-weight: normal;}
@@ -347,7 +347,7 @@ $(window).bind('load', function() {
         <li><a href="{URL}" target="_blank">{Label}</a></li>
         {/block:Pages}
         {/block:HasPages}
-        <!--<li><a href="/random">random</a></li><li><a href="{RSS}">rss</a></li><li><a href="javascript:;" id="btnSearch">search</a></li>--> 
+        <!--<li><a href="/random">random</a></li><li><a href="{RSS}">rss</a></li><li><a href="javascript:;" id="btnSearch">search</a></li>-->
         {block:SubmissionsEnabled}
         <li><a href="/submit">Submit</a></li>
         {/block:SubmissionsEnabled} </nav>
@@ -377,14 +377,12 @@ $(window).bind('load', function() {
       {block:Posts}
       <article class="content">
         <div>
-          <div class="styled"> 
+          <div class="styled">
       {block:Text}
             {Body}
             {/block:Text}
             {block:Photo}
-            {LinkOpenTag}
             <div class="photoContainer {block:HasTags}{block:Tags}{tag} {/block:Tags}{/block:HasTags}"> <img src="{PhotoURL-400}" alt="{PhotoAlt}" /></div>
-            {LinkCloseTag}
             {block:Caption}
             <div class="photoCaption textCufon"><a href="{Permalink}">{Caption}</a></div>
             {/block:Caption}
@@ -459,7 +457,7 @@ $(window).bind('load', function() {
           <h3>{Asker} asked: {Question}</h3>
           {Answer}
           {/block:Answer} </div>
-        <!-- /styled --> 
+        <!-- /styled -->
         {block:PostNotes}
         {PostNotes}
         {/block:PostNotes}
@@ -486,7 +484,7 @@ $(window).bind('load', function() {
           {/block:NextPage}
         </ul>
       </nav>
-      {/block:Pagination} 
+      {/block:Pagination}
       {block:DayPagination}
       <nav id="pageNav">
         <ul class="clearfix">
@@ -499,7 +497,7 @@ $(window).bind('load', function() {
         </ul>
       </nav>
       {/block:DayPagination} </div>
-    <!-- END layout --> 
+    <!-- END layout -->
   </section>
   <aside>
     <div class="loading hide"></div>
@@ -540,8 +538,8 @@ $(window).bind('load', function() {
 </div>
 </div>
 <div id="windowloading" class="loading"></div>
-<!-- Scripts --> 
-<script src="http://static.tumblr.com/5gdodwo/eFWmuph9l/jquery.autopager.min.js"></script> 
+<!-- Scripts -->
+<script src="http://static.tumblr.com/5gdodwo/eFWmuph9l/jquery.autopager.min.js"></script>
 <script>
   function styling() {
     //photostyling
@@ -567,7 +565,7 @@ $(window).bind('load', function() {
       $(this).attr('href',trueHref);
      });
   }
-  
+
   function photoRotate(){
     $('.photoWrapper').click(function(){
      if ($(this).hasClass('an0')) {
@@ -585,12 +583,12 @@ $(window).bind('load', function() {
      }
     });
   }
-    
+
   $(function(){
     styling();
     photoRotate();
   });
-  
+
 
   //browsercheck
   var ua = navigator.userAgent;
