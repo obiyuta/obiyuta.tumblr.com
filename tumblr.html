@@ -248,8 +248,8 @@ article .chat li { margin: 0 0 2px; padding: 2px 0 2px 0;}
 #share .twBtn:hover, #share .twBtn.hover { background-position: 0 -285px; width: 45px; height: 45px;}
 #share .fbBtn { background-position: 0 0; width: 45px; height: 45px;}
 #share .fbBtn:hover, #share .fbBtn.hover { background-position: 0 -95px; width: 45px; height: 45px;}
-.like_and_reblog_buttons { list-style: none; display: inline-block; width: 100%; height: 0; margin-bottom: 0; position: relative; top: -38px; opacity: 0.6; -webkit-opacity: 0.6; -moz-opacity: 0.6;-webkit-transition-property: opacity,visibility;-moz-transition-property: opacity,visibility;-ms-transition-property: opacity,visibility;transition-property: opacity,visibility;-webkit-transition-duration: .3s,0s;-moz-transition-duration: .3s,0s;-ms-transition-duration: .3s,0s;transition-duration: .3s,0s;-webkit-transition-timing-function: linear;-moz-transition-timing-function: linear;-ms-transition-timing-function: linear;transition-timing-function: linear;-webkit-transition-delay: 0s,0.3s;-moz-transition-delay: 0s,0.3s;-ms-transition-delay: 0s,0.3s;transition-delay: 0s,0.3s;}
-.like_and_reblog_buttons:hover { opacity: 0.99; -webkit-opacity: 0.99; -moz-opacity: 0.99;}
+.like_and_reblog_buttons { list-style: none; display: inline-block; width: 100%; height: 0; margin-bottom: 0; position: relative; top: -38px; opacity: 0.2; -webkit-opacity: 0.2; -moz-opacity: 0.2;-webkit-transition-property: opacity,visibility;-moz-transition-property: opacity,visibility;-ms-transition-property: opacity,visibility;transition-property: opacity,visibility;-webkit-transition-duration: .3s,0s;-moz-transition-duration: .3s,0s;-ms-transition-duration: .3s,0s;transition-duration: .3s,0s;-webkit-transition-timing-function: linear;-moz-transition-timing-function: linear;-ms-transition-timing-function: linear;transition-timing-function: linear;-webkit-transition-delay: 0s,0.3s;-moz-transition-delay: 0s,0.3s;-ms-transition-delay: 0s,0.3s;transition-delay: 0s,0.3s;}
+.like_and_reblog_buttons:hover { opacity: 0.4; -webkit-opacity: 0.4; -moz-opacity: 0.4;}
 .Ask .like_and_reblog_buttons { display: none;}
 .like_and_reblog_buttons li { float: right; display: inline-block; margin: 0; height: 20px; width: 20px; margin: 5px 0 0 10px; text-align: center;}
 .like_and_reblog_buttons li.noteCount { border: 2px solid #cccccc; border-radius: 50%; moz-border-radius: 50%; webkit-border-radius: 50%; box-sizing: border-box; line-height: 16px; color: #cccccc;}
@@ -333,7 +333,7 @@ $(window).bind('load', function() {
       <nav id="mainNav">
         <li><a href="/">home</a></li>
     <!--0<li><a href="/archive">archive</a></li>-->
-    <li class="tag">tag</li>
+    <!-- <li class="tag">tag</li> -->
     <li class="about">about</li>
         {block:AskEnabled}
         <li><a href="/ask">ask</a></li>
